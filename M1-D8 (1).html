@@ -10,7 +10,7 @@
 
 <body>
   <div>
-    <h1 onclick="makeItClickable()" id="h1Click">This is the title of the page</h1>
+    <h1>This is the title of the page</h1>
     <h2>This is the subtitle of the page</h2>
   </div>
 
@@ -75,10 +75,11 @@
     */
 
     const changeTagText = function () {
-      let h1 = document.querySelector("div>p")
-      h1.innerText = newParagraph
+      for (let child of document.querySelectorAll("div> p"))
+        child.innerText = "New text in div"
     };
-    changeTagText("New pragraph added")
+
+    changeTagText()
 
 
 
@@ -87,8 +88,11 @@
     */
 
     const changeUrls = function () {
+      for (let date of document.getElementsByTagName("a"))
+        date.href = "https://www.google.com"
       //
     };
+    changeUrls()
 
     /* EXERCISE 5
      Write a function for adding a new list item in the second unordered list.
@@ -128,13 +132,7 @@
 
 
     const makeItClickable = function () {
-      const title = document.querySelector('h1')
-      title.addEventListener("click", function (e) {
-        e.target.classList.toggle('myHeading')
-      })
-    }
-    makeItClickable()
-    //
+    };
 
 
     /* EXERCISE 10
