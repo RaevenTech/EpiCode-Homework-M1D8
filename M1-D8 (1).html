@@ -9,7 +9,7 @@
 </head>
 
 <body>
-  <div>
+  <div id="firstDiv">
     <h1>This is the title of the page</h1>
     <h2>This is the subtitle of the page</h2>
   </div>
@@ -111,8 +111,13 @@
     */
 
     const addParagraph = function (content) {
-      //
+      let newDivP = document.createElement("p");
+      newDivP.innerText = content;
+      let addNewText = document.querySelector("#firstDiv");
+      addNewText.appendChild(newDivP);
     };
+    addParagraph("This is the NEW paragraph!");
+
 
     /* EXERCISE 7
      Write a function for making the first unordered list disappear.
@@ -159,6 +164,7 @@
     */
 
     window.onload = function () {
+      alert("Get ready to load")
       //
     };
 
