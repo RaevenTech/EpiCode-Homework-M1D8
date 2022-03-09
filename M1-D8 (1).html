@@ -75,7 +75,7 @@
     */
 
     const changeTagText = function () {
-      for (let child of document.querySelectorAll("div> p"))
+      for (let child of document.querySelectorAll("div p"))
         child.innerText = "New text in div"
     };
 
@@ -99,8 +99,12 @@
     */
 
     const addToTheSecond = function (content) {
-      //
+      let newListItem = document.createElement("li");
+      newListItem.innerText = content;
+      let addNewList = document.getElementById("secondList");
+      addNewList.appendChild(newListItem);
     };
+    addToTheSecond("This is the new list!");
 
     /* EXERCISE 6
      Write a function for adding a second paragraph to the first div.
